@@ -1,5 +1,5 @@
 ---
-title: "【Amazon Neptune】AWSの基礎を学ぼう 特別編　最新サービスをみんなで触ってみる 初めてのグラフデータベース"
+title: "【Amazon Neptune】AWSの基礎を学ぼう 特別編"
 emoji: "🚴🏻‍♀️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["aws","座学","感想"]
