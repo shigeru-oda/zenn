@@ -1,0 +1,13 @@
+title: "AWS Amplify Studio + Figmaハンズオン"
+summary: "https://awsbasics.connpass.com/event/240343/"
+topics: ["awsbasics"]
+published: false
+price: 0 # 有料の場合200〜5000
+# 本に含めるチャプターを順番に並べましょう
+chapters:
+  - introduction
+  - setup-cloud9
+  - setup-amplify
+  - setup-studio
+  - setup-figma
+  - import-figma
