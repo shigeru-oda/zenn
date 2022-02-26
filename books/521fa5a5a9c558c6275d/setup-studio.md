@@ -54,3 +54,38 @@ AWSが準備されている`AWS Amplify UI Kit`を自分のアカウントにフ
 大きさは300-200にしていますが、厳密である必要はないです。
 厳密に設定したい方はフレームを選択した後に右ペインの`W`,`H`で微調整可能です
 ![](https://storage.googleapis.com/zenn-user-upload/d45b77bd07f5-20220227.png)
+
+## Image
+何かしらの画像をコピーします。フレーム外を選択した状態で、ペーストを行います。
+![](https://storage.googleapis.com/zenn-user-upload/d9379faf21c7-20220227.png)
+その後、フレームの上部に画像が収まるように移動・調整を行います。
+![](https://storage.googleapis.com/zenn-user-upload/affb774ec65d-20220227.png)
+
+## Text
+ヘッダーのTマークを選択し、フレームに収まるように配置します。
+Textの１つ目としてTitleを設定しました。
+![](https://storage.googleapis.com/zenn-user-upload/7ecace1dd9df-20220227.png)
+Textの２つ目としてDescriptionを設定しました。
+![](https://storage.googleapis.com/zenn-user-upload/88933aa519d7-20220227.png)
+
+## Create Component
+Flame、Image、Textの２つを選択した状態で右クリックをし、`Create Component`を選択します。
+![](https://storage.googleapis.com/zenn-user-upload/62e1014d52ff-20220227.png)
+
+選択範囲が`Component`になりました。
+![](https://storage.googleapis.com/zenn-user-upload/245fa77ec98e-20220227.png)
+
+Componentの名前はダブルクリックで編集できますので、`HomeCard`と変更します。
+![](https://storage.googleapis.com/zenn-user-upload/04921cd244c9-20220227.png)
+
+## Share
+画面右上の`Share`ボタンを押下します。サブウィンドウが立ち上がりますので、`Copy link`を選択
+![](https://storage.googleapis.com/zenn-user-upload/8c5c3adca7d2-20220227.png)
+
+## Sync with Figma
+Amplify Studioの画面に戻り`② Paste your Figma file link`配下にCopyしたアドレスを貼り付けます。
+その後`Continue`ボタン押下
+![](https://storage.googleapis.com/zenn-user-upload/0d921c960df6-20220227.png)
+
+画面右上の`Accept All`ボタンを押下し、FigmaとAmplify Studioを同期します。
+![](https://storage.googleapis.com/zenn-user-upload/ccb2a2e37049-20220227.png)
