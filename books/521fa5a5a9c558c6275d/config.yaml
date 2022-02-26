@@ -9,5 +9,4 @@ chapters:
   - setup-cloud9
   - setup-amplify
   - setup-studio
-  - setup-figma
-  - import-figma
+  - setup-react

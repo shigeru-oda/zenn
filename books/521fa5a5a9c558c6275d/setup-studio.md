@@ -1,5 +1,5 @@
 ---
-title: "AWSの開発環境作成・準備（Studio）"
+title: "Amplify Studioの準備・作成"
 free: true
 ---
 # このチャプターでやること

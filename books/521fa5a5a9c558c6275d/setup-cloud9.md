@@ -1,5 +1,5 @@
 ---
-title: "AWSの開発環境作成（Cloud9）"
+title: "Cloud9の準備・作成"
 free: true
 ---
 # このチャプターでやること
