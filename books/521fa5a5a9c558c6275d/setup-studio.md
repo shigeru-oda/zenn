@@ -49,19 +49,23 @@ Cloud9からAmplify StudioとFigmaで画面構築を行います。
 AWSが準備されている`AWS Amplify UI Kit`を自分のアカウントにフォークされました。
 
 # Figma
+
 ## Flame
+
 ヘッダーの＃マークを選択し、画面上の空いているスペースにFlameを設定します。
 大きさは300-200にしていますが、厳密である必要はないです。
 厳密に設定したい方はフレームを選択した後に右ペインの`W`,`H`で微調整可能です
 ![](https://storage.googleapis.com/zenn-user-upload/d45b77bd07f5-20220227.png)
 
 ## Image
+
 何かしらの画像をコピーします。フレーム外を選択した状態で、ペーストを行います。
 ![](https://storage.googleapis.com/zenn-user-upload/d9379faf21c7-20220227.png)
 その後、フレームの上部に画像が収まるように移動・調整を行います。
 ![](https://storage.googleapis.com/zenn-user-upload/affb774ec65d-20220227.png)
 
 ## Text
+
 ヘッダーのTマークを選択し、フレームに収まるように配置します。
 Textの１つ目としてTitleを設定しました。
 ![](https://storage.googleapis.com/zenn-user-upload/7ecace1dd9df-20220227.png)
@@ -69,6 +73,7 @@ Textの２つ目としてDescriptionを設定しました。
 ![](https://storage.googleapis.com/zenn-user-upload/88933aa519d7-20220227.png)
 
 ## Create Component
+
 Flame、Image、Textの２つを選択した状態で右クリックをし、`Create Component`を選択します。
 ![](https://storage.googleapis.com/zenn-user-upload/62e1014d52ff-20220227.png)
 
@@ -79,13 +84,34 @@ Componentの名前はダブルクリックで編集できますので、`HomeCar
 ![](https://storage.googleapis.com/zenn-user-upload/04921cd244c9-20220227.png)
 
 ## Share
+
 画面右上の`Share`ボタンを押下します。サブウィンドウが立ち上がりますので、`Copy link`を選択
 ![](https://storage.googleapis.com/zenn-user-upload/8c5c3adca7d2-20220227.png)
 
 ## Sync with Figma
+
 Amplify Studioの画面に戻り`② Paste your Figma file link`配下にCopyしたアドレスを貼り付けます。
 その後`Continue`ボタン押下
 ![](https://storage.googleapis.com/zenn-user-upload/0d921c960df6-20220227.png)
 
 画面右上の`Accept All`ボタンを押下し、FigmaとAmplify Studioを同期します。
 ![](https://storage.googleapis.com/zenn-user-upload/ccb2a2e37049-20220227.png)
+
+# UIコンポーネントに表示されるデータを準備
+## 画面遷移
+左ペインの`Content`を選択し、`Auto-generate seed data`ボタン押下します。
+![](https://storage.googleapis.com/zenn-user-upload/61eceeff19a0-20220227.png)
+自動作成する行数を指定し、`Generate data`ボタン押下します。ここでは５行データを選択します。
+![](https://storage.googleapis.com/zenn-user-upload/72450901999c-20220227.png)
+ランダムなデータが５行あることを確認できます。
+![](https://storage.googleapis.com/zenn-user-upload/cdb13782a618-20220227.png)
+
+
+# UIコンポーネントをデータと紐付ける
+## 画面遷移
+UIライブラリが完成したので、コンポーネントをデータと紐付けます。
+`Amplify Studio` -> `UI Library` -> `My Components` -> `HomeCard` -> `Configure`ボタン
+![](https://storage.googleapis.com/zenn-user-upload/ead3e845e026-20220227.png)
+
+## Component properties
+画面右上にComponent propertiesという項目があるので`Add prop`を選択
