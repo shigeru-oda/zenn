@@ -54,3 +54,42 @@ https://homesoda.d2st1248z19swk.amplifyapp.com
 
 # 確認結果
 ![](https://storage.googleapis.com/zenn-user-upload/28a5d28e5dec-20220227.png)
+
+
+# src/App.jsの修正2
+
+/home/ec2-user/environment/amplify-homes/src/App.jsを以下コードで差し替えます。
+これによりページングや幅変更でコンテンツが調整されるようになります。
+```
+import './App.css';
+import { NewHomes, NavBar, MarketingFooter } from './ui-components'
+
+function App() {
+  return (
+    <div className="App">
+    <NavBar width={"100vw"}/>
+    <NewHomes isPaginated itemsPerPage={3}/>
+    <MarketingFooter width={"100vw"}/>
+    </div>
+  );
+}
+
+export default App;
+```
+
+
+# amplify publish２
+作成された結果をpublishしましょう。`[DEP0148] DeprecationWarning`というWorningが出ますが、お気にせず。
+```sh
+amplify publish
+```
+
+以下のような表示がされればOKです。ブラウザでアクセスしてみましょう
+```
+✔ Zipping artifacts completed.
+✔ Deployment complete!
+https://homesoda.d2st1248z19swk.amplifyapp.com
+```
+
+# 確認結果２
+![](https://storage.googleapis.com/zenn-user-upload/67c121bbc71f-20220227.png)
