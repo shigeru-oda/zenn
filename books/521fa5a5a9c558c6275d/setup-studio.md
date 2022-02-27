@@ -98,7 +98,9 @@ Amplify Studioの画面に戻り`② Paste your Figma file link`配下にCopyし
 ![](https://storage.googleapis.com/zenn-user-upload/ccb2a2e37049-20220227.png)
 
 # UIコンポーネントに表示されるデータを準備
+
 ## 画面遷移
+
 左ペインの`Content`を選択し、`Auto-generate seed data`ボタン押下します。
 ![](https://storage.googleapis.com/zenn-user-upload/61eceeff19a0-20220227.png)
 自動作成する行数を指定し、`Generate data`ボタン押下します。ここでは５行データを選択します。
@@ -106,12 +108,77 @@ Amplify Studioの画面に戻り`② Paste your Figma file link`配下にCopyし
 ランダムなデータが５行あることを確認できます。
 ![](https://storage.googleapis.com/zenn-user-upload/cdb13782a618-20220227.png)
 
+行をクリックするとデータ修正ができますので、`image_url`を好きな画像のURLに変更します。
+皆様の好きな画像でも良いですが、なんでも宜しければ、以下画像をご利用ください。
+
+- <https://raw.githubusercontent.com/shigeru-oda/zenn/main/books/521fa5a5a9c558c6275d/300-100-1.png>
+- <https://raw.githubusercontent.com/shigeru-oda/zenn/main/books/521fa5a5a9c558c6275d/300-100-2.png>
+- <https://raw.githubusercontent.com/shigeru-oda/zenn/main/books/521fa5a5a9c558c6275d/300-100-3.png>
+- <https://raw.githubusercontent.com/shigeru-oda/zenn/main/books/521fa5a5a9c558c6275d/300-100-4.png>
+- <https://raw.githubusercontent.com/shigeru-oda/zenn/main/books/521fa5a5a9c558c6275d/300-100-5.png>
 
 # UIコンポーネントをデータと紐付ける
+
 ## 画面遷移
+
 UIライブラリが完成したので、コンポーネントをデータと紐付けます。
 `Amplify Studio` -> `UI Library` -> `My Components` -> `HomeCard` -> `Configure`ボタン
 ![](https://storage.googleapis.com/zenn-user-upload/ead3e845e026-20220227.png)
 
 ## Component properties
+
 画面右上にComponent propertiesという項目があるので`Add prop`を選択
+
+- Name : `home`
+- Type : `Home`
+![](https://storage.googleapis.com/zenn-user-upload/cdf627384e02-20220227.png)
+
+画像をクリックするとChild propertiesという項目が表示されるので`Set prop`を選択
+
+- Name : `src`
+- Type : `home.image_url`
+![](https://storage.googleapis.com/zenn-user-upload/110fd32d0e54-20220227.png)
+
+TitleをクリックするとChild propertiesという項目が表示されるので`Set prop`を選択
+
+- Name : `label`
+- Type : `home.address`
+![](https://storage.googleapis.com/zenn-user-upload/46ae7bc5f0d6-20220227.png)
+
+DescriptionをクリックするとChild propertiesという項目が表示されるので`Set prop`を選択
+
+- Name : `label`
+- Type : `home.price`
+![](https://storage.googleapis.com/zenn-user-upload/a268c94b571d-20220227.png)
+
+# コレクションを作成する
+
+５つのデータがあるので、これをコレクションとして並べて表示します。
+右上にあ`Create collection`ボタンを選択。
+サブ画面が表示されるので名前を設定します、ここでは`NewHomes`とします。
+![](https://storage.googleapis.com/zenn-user-upload/0d503c7d8c35-20220227.png)
+
+このような画面に遷移します、画像はリアルタイムに読み込まないようで表示されない可能性もあります。
+![](https://storage.googleapis.com/zenn-user-upload/6b78c4fa9e7b-20220227.png)
+
+## 　ここから手順は厳密でお願いします。なぜか画面がバグります
+
+- 画面左のPaddingを10pxで上下左右設定します。
+![](https://storage.googleapis.com/zenn-user-upload/2e277c70811f-20220227.png)
+
+- TypeをGridを選択します。
+![](https://storage.googleapis.com/zenn-user-upload/de6364ea78b3-20220227.png)
+
+- 画面右の`Collection data`で`View/Edit`を選択、別画面が表示されます。
+- Sort byの項目で`image_url`: `ascending`を選択します。
+![](https://storage.googleapis.com/zenn-user-upload/ba40fc71ea2b-20220227.png)
+
+- 画面下の`Get componet code`ボタンを選択、別画面が表示されますので、表示されているamplify pullコマンドを別途Cloud9にコピペします。
+
+## 　画面がバグってしまった方へ（対象の方のみ）
+
+画像が壊れてしまう時があります。
+この場合には作成したcollectionである`NewHomes`を削除し、再作成ください。
+`UI Library` -> `My Components` -> `NewHomes` -> `Deelte`ボタン
+以下、壊れた例。
+![](https://storage.googleapis.com/zenn-user-upload/81e1fabf6bed-20220227.png)
