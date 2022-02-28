@@ -17,10 +17,6 @@ amplify delete
 # Cloud9の削除
 Management Console -> Cloud9 -> このイベントで作成した環境をDelete
 
-# IAM Userの削除
-Management Console -> IAM -> ユーザー -> 当イベントで作成したユーザーをDelete
-`アクティブなキーが作成されてからの経過`が作業時間内である物が対象です。
-
 # Cognito UserPoolの削除
 Management Console -> Cognito -> ユーザープール -> 当イベントで作成したユーザープールをDelete
 `作成時刻`が作業時間内である物が対象です。
@@ -38,6 +34,10 @@ Management Console -> Lambda -> 以下Lambdaを選択して削除
 - `amplify-login-custom-message-xxxx`
 - `amplify-login-create-auth-challenge-xxxx`
 - `amplify-login-define-auth-challenge-xxxx`
+
+# IAM Userの削除
+Management Console -> IAM -> ユーザー -> 当イベントで作成したユーザーをDelete
+`アクティブなキーが作成されてからの経過`が作業時間内である物が対象です。
 
 # IAM Roleの削除
 Management Console -> IAM -> ロール -> `amplify-login-lambda-xxxx`

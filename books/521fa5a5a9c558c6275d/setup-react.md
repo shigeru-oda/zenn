@@ -15,7 +15,8 @@ amplify pull --appId d2st1248z19swk --envName homesoda
 
 以下コマンドを実施すると、UI Libraryで生成したレイアウトがコードとして取り込めていることが分かります。
 ``` sh
-ls -l /home/ec2-user/environment/amplify-homes/src/ui-components/
+ls -l /home/ec2-user/environment/amplify-homes/src/ui-components/NewHomes.jsx
+cat /home/ec2-user/environment/amplify-homes/src/ui-components/NewHomes.jsx
 ```
 
 # src/App.jsの修正

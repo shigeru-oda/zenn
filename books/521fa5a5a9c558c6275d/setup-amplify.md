@@ -161,7 +161,8 @@ amplify publish
 ? Are you sure you want to continue? `Yes`
 ? Do you want to update code for your updated GraphQL API `No`
 
-途中Warningが表示されますが、無視して以下のような表示が最後に出れば成功です
+無視して以下のような表示が最後に出れば成功です
+途中`[DEP0148] DeprecationWarning`というWarningが出ますがお気にせず。
 
 ```
 ✔ Deployment complete!

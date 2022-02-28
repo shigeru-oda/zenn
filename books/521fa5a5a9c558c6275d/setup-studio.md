@@ -59,7 +59,11 @@ AWSが準備されている`AWS Amplify UI Kit`を自分のアカウントにフ
 
 ## Image
 
-何かしらの画像をコピーします。フレーム外を選択した状態で、ペーストを行います。
+以下画像をブラウザ上でコピーします。
+![](https://raw.githubusercontent.com/shigeru-oda/zenn/main/books/521fa5a5a9c558c6275d/300-100.png)
+
+Figmaフレーム外を選択した状態で、ペーストを行います。
+
 ![](https://storage.googleapis.com/zenn-user-upload/d9379faf21c7-20220227.png)
 その後、フレームの上部に画像が収まるように移動・調整を行います。
 ![](https://storage.googleapis.com/zenn-user-upload/affb774ec65d-20220227.png)
@@ -90,8 +94,7 @@ Componentの名前はダブルクリックで編集できますので、`HomeCar
 
 ## Sync with Figma
 
-Amplify Studioの画面に戻り`② Paste your Figma file link`配下にCopyしたアドレスを貼り付けます。
-その後`Continue`ボタン押下
+Amplify Studioの画面に戻り`② Paste your Figma file link`配下にCopyしたアドレスを貼り付けます。その後`Continue`ボタン押下
 ![](https://storage.googleapis.com/zenn-user-upload/0d921c960df6-20220227.png)
 
 画面右上の`Accept All`ボタンを押下し、FigmaとAmplify Studioを同期します。
@@ -121,7 +124,7 @@ Amplify Studioの画面に戻り`② Paste your Figma file link`配下にCopyし
 
 ## 画面遷移
 
-UIライブラリが完成したので、コンポーネントをデータと紐付けます。
+コンポーネントをデータと紐付けます。
 `Amplify Studio` -> `UI Library` -> `My Components` -> `HomeCard` -> `Configure`ボタン
 ![](https://storage.googleapis.com/zenn-user-upload/ead3e845e026-20220227.png)
 
@@ -161,7 +164,7 @@ DescriptionをクリックするとChild propertiesという項目が表示さ�
 このような画面に遷移します、画像はリアルタイムに読み込まないようで表示されない可能性もあります。
 ![](https://storage.googleapis.com/zenn-user-upload/6b78c4fa9e7b-20220227.png)
 
-## 　ここから手順は厳密でお願いします。なぜか画面がバグります
+## 　ここから環境によっては画面がバグる可能性があります。私の環境でうまく行った手順は以下です
 
 - 画面左のPaddingを10pxで上下左右設定します。
 ![](https://storage.googleapis.com/zenn-user-upload/2e277c70811f-20220227.png)
@@ -173,7 +176,8 @@ DescriptionをクリックするとChild propertiesという項目が表示さ�
 - Sort byの項目で`image_url`: `ascending`を選択します。
 ![](https://storage.googleapis.com/zenn-user-upload/ba40fc71ea2b-20220227.png)
 
-- 画面下の`Get componet code`ボタンを選択、別画面が表示されますので、表示されているamplify pullコマンドを別途Cloud9にコピペします。
+- 画面下の`Get componet code`ボタンを選択、別画面が表示されますので、表示されているamplify pullコマンドを後程Cloud9にコピペします。
+![](https://storage.googleapis.com/zenn-user-upload/79caba1f28d5-20220228.png)
 
 ## 　画面がバグってしまった方へ（対象の方のみ）
 
