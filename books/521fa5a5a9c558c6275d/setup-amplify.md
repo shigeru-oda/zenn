@@ -4,7 +4,7 @@ free: true
 ---
 # このチャプターでやること
 
-Cloud9からAmplify HostingとAmplify Apiを行います。
+Cloud9からamplify api addとamplify hosting addを行います。
 
 # git clone
 
@@ -25,13 +25,22 @@ Receiving objects: 100% (57/57), 841.69 KiB | 23.38 MiB/s, done.
 Resolving deltas: 100% (5/5), done.
 ```
 
+# 不要な環境削除
+
+github上では既存環境がすでに作成されているので、これを削除します。
+一番最後に環境削除する時に邪魔になるためです。
+
+``` sh
+cd amplify-homes/
+rm amplify/team-provider-info.json 
+```
+
 # amplify cliのインストール
 
 amplifyの操作を行うために、npmでamplify cliをインストールします、以下コマンドを実施
 途中WARNが出ますが、気にしない。
 
 ``` sh
-cd amplify-homes/
 npm i
 npm install -g @aws-amplify/cli
 ```
@@ -45,10 +54,8 @@ amplify init
 ```
 
 対話形式での設定を行いますので、以下を設定
-? Do you want to use an existing environment? `No`
-
-**【注意】以下はご自身の名前を設定ください。このあとの処理でS3が自動作成されるのですが、「プロジェクト名」+「UTC時間(時分秒)」で作成されるため、全員が同じプロジェクト名であるとS3での衝突が発生します**
-? Enter a name for the environment `home`+`yourname`
+**【注意】以下はご自身の名前を設定ください。このあとの処理でS3が自動作成されるのですが、「プロジェクト名」+「環境名」+「UTC時間(時分秒)」で作成されるため、全員が同じプロジェクト名＋環境名であるとS3での衝突が発生します**
+? Enter a name for the environment `yourname`
 
 ? Choose your default editor: `Visual Studio Code`
 
@@ -91,6 +98,31 @@ IAMのUSER作成画面に進みます。
 
 クレデンシャル情報を登録した後、この情報を利用してCloudFormationが起動します。
 
+# amplify status
+
+Cloud9コンソールに対して以下コマンドを実施
+
+``` sh
+amplify status
+```
+
+以下のような表示が出ればOKです。
+
+``` sh
+    Current Environment: dev
+    
+┌──────────┬───────────────┬───────────┬───────────────────┐
+│ Category │ Resource name │ Operation │ Provider plugin   │
+├──────────┼───────────────┼───────────┼───────────────────┤
+│ Api      │ amplifyhomes  │ Create    │ awscloudformation │
+└──────────┴───────────────┴───────────┴───────────────────┘
+
+GraphQL transformer version: 2
+```
+
+これはgithub上では既に`amplify api add`が実行された結果が含まれています。
+その為、何もしなくてもApiが追加されるstatusになっています。
+
 # amplify hosting add
 
 Cloud9コンソールに対して以下コマンドを実施
@@ -102,7 +134,6 @@ amplify hosting add
 対話形式での設定を行いますので、以下を設定
 ? Select the plugin module to execute `Hosting with Amplify Console (Managed hosting with custom domains, Continuous deployment)`
 ? Choose a type `Manual deployment`
-
 
 # amplify hosting add
 
@@ -130,7 +161,8 @@ amplify publish
 ? Are you sure you want to continue? `Yes`
 ? Do you want to update code for your updated GraphQL API `No`
 
-以下のような表示が最後に出れば成功です
+途中Warningが表示されますが、無視して以下のような表示が最後に出れば成功です
+
 ```
 ✔ Deployment complete!
 https://homesoda.d2st1248z19swk.amplifyapp.com
