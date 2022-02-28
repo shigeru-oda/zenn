@@ -135,7 +135,7 @@ amplify hosting add
 ? Select the plugin module to execute `Hosting with Amplify Console (Managed hosting with custom domains, Continuous deployment)`
 ? Choose a type `Manual deployment`
 
-# amplify hosting add
+# amplify publish
 
 Cloud9コンソールに対して以下コマンドを実施
 
