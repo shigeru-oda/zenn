@@ -10,6 +10,7 @@ Figmaで生成されたコードをReactに取り込み、Amplifyにデプロイ
 Cloud9に戻り、コンソールに対して、前チャプターのamplify pullコマンドを実施
 以下のようなコマンドです。
 ``` sh
+cd ~/environment/amplify-homes/
 amplify pull --appId d2st1248z19swk --envName homesoda
 ```
 

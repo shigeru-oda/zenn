@@ -109,7 +109,7 @@ amplify status
 以下のような表示が出ればOKです。
 
 ``` sh
-    Current Environment: dev
+    Current Environment: homesoda
     
 ┌──────────┬───────────────┬───────────┬───────────────────┐
 │ Category │ Resource name │ Operation │ Provider plugin   │
