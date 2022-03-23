@@ -174,7 +174,7 @@ DescriptionをクリックするとChild propertiesという項目が表示さ�
 
 - 画面右の`Collection data`で`View/Edit`を選択、別画面が表示されます。
 - Sort byの項目で`image_url`: `ascending`を選択して、`Create data set`をクリックします。
-![](https://storage.googleapis.com/zenn-user-upload/ba40fc71ea2b-20220227.png)
+![](https://storage.googleapis.com/zenn-user-upload/182131a622f0-20220323.png)
 
 - 画面下の`Get componet code`ボタンを選択、別画面が表示されますので、表示されているamplify pullコマンドを後程Cloud9にコピペします。
 ![](https://storage.googleapis.com/zenn-user-upload/79caba1f28d5-20220228.png)
