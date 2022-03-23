@@ -6,6 +6,11 @@ free: true
 
 Cloud9からamplify api addとamplify hosting addを行います。
 
+# Cloud9のCredentialsをOFFにする。
+デフォルトでCloud9についているCredentialsが邪魔になるのでOFFにします。
+ヘッダー部Cloud9のアイコン -> Preferences -> AWS Settings -> Credentials
+![](https://storage.googleapis.com/zenn-user-upload/b406ab184997-20220323.png)
+
 # git clone
 
 Cloud9コンソールに対して以下コマンドを実施
@@ -41,6 +46,8 @@ amplifyの操作を行うために、npmでamplify cliをインストールし�
 途中WARNが出ますが、気にしない。
 
 ``` sh
+nvm install 14.19.1
+nvm use 14.19.1
 npm i
 npm install -g @aws-amplify/cli
 ```
