@@ -79,3 +79,8 @@ tmpfs           4.1G     0  4.1G   0% /sys/fs/cgroup
 /dev/nvme0n1p1   33G  8.7G   24G  27% /
 tmpfs           815M     0  815M   0% /run/user/1000
 ```
+
+# Cloud9のCredentialsをOFFにする。
+デフォルトでCloud9についているCredentialsが邪魔になるのでOFFにします。
+ヘッダー部Cloud9のアイコン -> Preferences -> AWS Settings -> Credentials
+![](https://storage.googleapis.com/zenn-user-upload/b406ab184997-20220323.png)
