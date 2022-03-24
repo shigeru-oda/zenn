@@ -142,17 +142,17 @@ Amplify Studioの画面に戻り`② Paste your Figma file link`配下にCopyし
 - Type : `home.image_url`
 ![](https://storage.googleapis.com/zenn-user-upload/820b8eac55f9-20220323.png)
 
-TitleをクリックするとChild propertiesという項目が表示されるので`Set prop`を選択
+TitleをクリックするとChild propertiesという項目が表示されるので`+`を選択
 
 - Name : `label`
 - Type : `home.address`
-![](https://storage.googleapis.com/zenn-user-upload/46ae7bc5f0d6-20220227.png)
+![](https://storage.googleapis.com/zenn-user-upload/65fce0f1ba25-20220324.png)
 
-DescriptionをクリックするとChild propertiesという項目が表示されるので`Set prop`を選択
+DescriptionをクリックするとChild propertiesという項目が表示されるので`+`を選択
 
 - Name : `label`
 - Type : `home.price`
-![](https://storage.googleapis.com/zenn-user-upload/a268c94b571d-20220227.png)
+![](https://storage.googleapis.com/zenn-user-upload/9e9947dea916-20220324.png)
 
 # コレクションを作成する
 
