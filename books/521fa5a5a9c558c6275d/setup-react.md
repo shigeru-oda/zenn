@@ -11,7 +11,7 @@ Cloud9に戻り、コンソールに対して、前チャプターのamplify pul
 以下のようなコマンドです。
 ``` sh
 cd ~/environment/amplify-homes/
-amplify pull --appId d2st1248z19swk --envName homesoda
+amplify pull --appId xxxxxxxxxxxxxx --envName yourname
 ```
 
 以下コマンドを実施すると、UI Libraryで生成したレイアウトがコードとして取り込めていることが分かります。
