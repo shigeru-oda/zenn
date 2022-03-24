@@ -6,6 +6,7 @@ free: true
 
 [特別編 Amplify Studio ハンズオン](https://awsbasics.connpass.com/event/240343/)で用いるハンズオン資料です。
 ベースは[awsブログの記事](https://aws.amazon.com/jp/blogs/news/aws-amplify-studio-figma-to-fullstack-react-app-with-minimal-programming/)となっており、Cloud9でハンズオンできるように対応しています。
+ただし、AmplifyのVerUpで正しく稼働しない場合が資料作成中に確認されております。その場合にはごめんなさい。
 
 # 構成図
 
