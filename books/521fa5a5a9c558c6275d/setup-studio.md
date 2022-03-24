@@ -23,7 +23,7 @@ Cloud9からAmplify StudioとFigmaで画面構築を行います。
 - Lambda ✖️ 4つ
 - IAM Role
 
-画面を一つ戻ると、`Studioを起動する`ボタンに切り替わっています。
+画面を一つ戻ると、`Studioを起動する`ボタンに切り替わっていますので、ボタンをクリックしてStudioを起動します。
 ![](https://storage.googleapis.com/zenn-user-upload/ce4b598cacf7-20220226.png)
 
 # Data modeling
@@ -130,34 +130,34 @@ Amplify Studioの画面に戻り`② Paste your Figma file link`配下にCopyし
 
 ## Component properties
 
-画面右上にComponent propertiesという項目があるので`Add prop`を選択
+画面右上にComponent propertiesという項目があるので`+`を選択
 
 - Name : `home`
 - Type : `Home`
-![](https://storage.googleapis.com/zenn-user-upload/cdf627384e02-20220227.png)
+![](https://storage.googleapis.com/zenn-user-upload/bae64b0cef73-20220323.png)
 
-画像をクリックするとChild propertiesという項目が表示されるので`Set prop`を選択
+画像をクリックするとChild propertiesという項目が表示されるので`+`を選択
 
 - Name : `src`
 - Type : `home.image_url`
-![](https://storage.googleapis.com/zenn-user-upload/110fd32d0e54-20220227.png)
+![](https://storage.googleapis.com/zenn-user-upload/820b8eac55f9-20220323.png)
 
-TitleをクリックするとChild propertiesという項目が表示されるので`Set prop`を選択
+TitleをクリックするとChild propertiesという項目が表示されるので`+`を選択
 
 - Name : `label`
 - Type : `home.address`
-![](https://storage.googleapis.com/zenn-user-upload/46ae7bc5f0d6-20220227.png)
+![](https://storage.googleapis.com/zenn-user-upload/65fce0f1ba25-20220324.png)
 
-DescriptionをクリックするとChild propertiesという項目が表示されるので`Set prop`を選択
+DescriptionをクリックするとChild propertiesという項目が表示されるので`+`を選択
 
 - Name : `label`
 - Type : `home.price`
-![](https://storage.googleapis.com/zenn-user-upload/a268c94b571d-20220227.png)
+![](https://storage.googleapis.com/zenn-user-upload/9e9947dea916-20220324.png)
 
 # コレクションを作成する
 
 ５つのデータがあるので、これをコレクションとして並べて表示します。
-右上にあ`Create collection`ボタンを選択。
+右上にある`Create collection`ボタンを選択。
 サブ画面が表示されるので名前を設定します、ここでは`NewHomes`とします。
 ![](https://storage.googleapis.com/zenn-user-upload/0d503c7d8c35-20220227.png)
 
@@ -173,8 +173,8 @@ DescriptionをクリックするとChild propertiesという項目が表示さ�
 ![](https://storage.googleapis.com/zenn-user-upload/de6364ea78b3-20220227.png)
 
 - 画面右の`Collection data`で`View/Edit`を選択、別画面が表示されます。
-- Sort byの項目で`image_url`: `ascending`を選択します。
-![](https://storage.googleapis.com/zenn-user-upload/ba40fc71ea2b-20220227.png)
+- Sort byの項目で`image_url`: `ascending`を選択して、`Create data set`をクリックします。
+![](https://storage.googleapis.com/zenn-user-upload/182131a622f0-20220323.png)
 
 - 画面下の`Get componet code`ボタンを選択、別画面が表示されますので、表示されているamplify pullコマンドを後程Cloud9にコピペします。
 ![](https://storage.googleapis.com/zenn-user-upload/79caba1f28d5-20220228.png)
