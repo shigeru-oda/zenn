@@ -32,7 +32,7 @@ Cloud9からAmplify StudioとFigmaで画面構築を行います。
 以下の画面がすでに出来ています。前チャプターでのAPIが作成されましたが、そこで作成された物です。
 ![](https://storage.googleapis.com/zenn-user-upload/676752a2948a-20220226.png)
 
-画面右上にある`Deploy`ボタンを押下します。確認画面が出ますがこちらでも`Deploy`ボタン押下
+画面右上にある`Save and Deploy`ボタンを押下します。確認画面が出ますがこちらでも`Deploy`ボタン押下
 
 # UI Library
 
