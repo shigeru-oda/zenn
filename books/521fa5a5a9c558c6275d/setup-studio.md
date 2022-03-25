@@ -97,8 +97,27 @@ Componentの名前はダブルクリックで編集できますので、`HomeCar
 Amplify Studioの画面に戻り`② Paste your Figma file link`配下にCopyしたアドレスを貼り付けます。その後`Continue`ボタン押下
 ![](https://storage.googleapis.com/zenn-user-upload/0d921c960df6-20220227.png)
 
-画面右上の`Accept All`ボタンを押下し、FigmaとAmplify Studioを同期します。
-![](https://storage.googleapis.com/zenn-user-upload/ccb2a2e37049-20220227.png)
+
+## Accept/Reject
+Figmaからこの後必要なUIコンポーネントだけ`Accept`を行います。
+対象は`HomeCard`、`NavBar`, `MarketingFooter`です。これ以外は`Reject`をしてください。
+#### HomeCard
+![](https://storage.googleapis.com/zenn-user-upload/709f87b7db48-20220325.png)
+
+#### NavBar
+![](https://storage.googleapis.com/zenn-user-upload/2ff2eafb72d1-20220325.png)
+
+#### MarketingFooter
+![](https://storage.googleapis.com/zenn-user-upload/e3cd7f4b61d5-20220325.png)
+
+#### 一番最後はSave Components
+最後は`Save Components`ボタンを押下します。
+![](https://storage.googleapis.com/zenn-user-upload/9b38f8d711c7-20220325.png)
+
+#### 間違ってAcceptされた方へ（対象の方のみ）
+間違ったUIコンポーネントを選択し、`Delete`ボタンを押下します。
+![](https://storage.googleapis.com/zenn-user-upload/d35ec3980a9c-20220325.png)
+
 
 # UIコンポーネントに表示されるデータを準備
 
