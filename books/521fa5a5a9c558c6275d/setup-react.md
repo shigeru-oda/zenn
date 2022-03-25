@@ -40,42 +40,6 @@ function App() {
 export default App;
 ```
 
-# 関連するファイルの修正
-
-後述の amplify publish した際に発生する mergeVariantsAndOverrides に関するエラーメッセージを回避するため、２ファイルについて、以下のとおり変更を行い、コメントアウトします。
-
-/home/ec2-user/environment/amplify-homes/src/ui-components/HeroLayout1.jsx
-```
-12c12
-<   mergeVariantsAndOverrides,
----
-> //  mergeVariantsAndOverrides,
-52a53
->   /*
-56a58
->   */
-68c70
-<       {...getOverrideProps(overrides, "HeroLayout1")}
----
-> //      {...getOverrideProps(overrides, "HeroLayout1")}
-```
-
-/home/ec2-user/environment/amplify-homes/src/ui-components/MyIcon.jsx
-```
-12c12
-<   mergeVariantsAndOverrides,
----
-> //  mergeVariantsAndOverrides,
-304a305
->   /*
-308a310
->   */
-326c328
-<       {...getOverrideProps(overrides, "MyIcon")}
----
-> //      {...getOverrideProps(overrides, "MyIcon")}
-```
-
 # amplify publish
 作成された結果をpublishしましょう。`[DEP0148] DeprecationWarning`というWorningが出ますが、お気にせず。
 ```sh
