@@ -24,5 +24,5 @@ Chapterがそれぞれを作成する範囲を簡易ですが示しています�
 # 前提
 
 - AWSアカウント
-- Figmaアカウント
+- [Figmaアカウント](https://www.figma.com/)
 - 最大数百円程度のAWS利用料金

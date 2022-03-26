@@ -40,5 +40,16 @@ Management Console -> IAM -> ユーザー -> 当イベントで作成したユ�
 `アクティブなキーが作成されてからの経過`が作業時間内である物が対象です。
 
 # IAM Roleの削除
-Management Console -> IAM -> ロール -> `amplify-login-lambda-xxxx`
-`最後のアクティビティ`が作業時間内である物が対象です。
+Management Console -> IAM -> ロール
+`amplify-login-lambda-xxxx`
+`ap-northeast-1_xxxx_Manage-only`
+`ap-northeast-1_xxxx-authRole`
+`ap-northeast-1_xxxx_Full-access`
+
+`作成時間`が作業時間内である物が対象です。
+
+作成時間は以下から表示可能です。
+- 歯車マークをクリック
+![](https://storage.googleapis.com/zenn-user-upload/99263de0f6db-20220326.png)
+- 作成時間を有効化
+![](https://storage.googleapis.com/zenn-user-upload/09af4f06e0b0-20220326.png)
