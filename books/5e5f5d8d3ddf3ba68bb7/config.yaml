@@ -1,0 +1,7 @@
+title: "[JAWS DAYS 2022] ハンズオン～コンテナサービスをCI/CDパイプラインでデプロイしよう～"
+summary: "JAWS DAYS 2022でのハンズオン資料のUpdate Verです"
+topics: ["jawsdays2022"]
+published: true
+price: 0 # 有料の場合200〜5000
+# 本に含めるチャプターを順番に並べましょう
+chapters:
