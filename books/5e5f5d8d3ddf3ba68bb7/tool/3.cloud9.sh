@@ -1,7 +1,5 @@
 #!/bin/bash
 set -e -o pipefail
-LogFile=`basename "$0"`.log
-
 
 # ■Cloud9の作成
 function CreateCloud9 () {
@@ -44,7 +42,8 @@ aws iam add-role-to-instance-profile \
     --role-name ContainerHandsOnForCloud9 \
     --instance-profile-name ContainerHandsOnForCloud9
 
-sleep 30
+echo "インスタンス起動の為、sleep 60"
+sleep 60
 
 InstanceId=`aws ec2 describe-instances \
     --query "Reservations[*].Instances[*].InstanceId" \
@@ -58,9 +57,9 @@ aws ec2 associate-iam-instance-profile \
 
 # ■環境変数処理
 function ExportEnvironmentVariable () {
-clear; cat << EOF > ${LogFile}
-##### 正常終了 ##########################################
-##### 以下をCopyして、コンソールに貼り付けて下さい。#####
+echo "##### 正常終了 #####"
+echo "##### 環境変数出力 #####"
+clear; cat << EOF > 3.cloud9-output.env
 export AccountID="${AccountID}"
 export VpcId="${VpcId}"
 export SubnetId1aPublic="${SubnetId1aPublic}"
@@ -73,9 +72,8 @@ export RouteTableIdPrivate="${RouteTableIdPrivate}"
 export PublicSecurityGroupsId="${PublicSecurityGroupsId}"
 export PrivateSecurityGroupsId="${PrivateSecurityGroupsId}"
 export InstanceId="${InstanceId}"
-#########################################################
 EOF
-cat ${LogFile}
+cat 3.cloud9-output.env
 }
 
 

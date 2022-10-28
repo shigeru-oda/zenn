@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e -o pipefail
-LogFile=`basename "$0"`.log
 
 # ■AWS CLI変数処理
 function SettingEnvironmentVariable () {
@@ -201,9 +200,9 @@ aws ecs create-service \
 
 # ■環境変数処理
 function ExportEnvironmentVariable () {
-clear; cat << EOF > ${LogFile}
-##### 正常終了 ##########################################
-##### 以下をCopyして、コンソールに貼り付けて下さい。#####
+echo "##### 正常終了 #####"
+echo "##### 環境変数出力 #####"
+clear; cat << EOF 4.ecs-alb-ecs-endpoint-output.env
 export AccountID="${AccountID}"
 export VpcId="${VpcId}"
 export SubnetId1aPublic="${SubnetId1aPublic}"
@@ -220,9 +219,8 @@ export LoadBalancerArn="${LoadBalancerArn}"
 export TargetGroupArn="${TargetGroupArn}"
 export LoadBalancersDnsName="${LoadBalancersDnsName}"
 export RevisionNo="${RevisionNo}"
-#########################################################
 EOF
-cat ${LogFile}
+cat 4.ecs-alb-ecs-endpoint-output.env
 }
 
 

@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e -o pipefail
-LogFile=`basename "$0"`.log
 
 # ■AWS Account IDの取得
 function AccountID () {
@@ -202,23 +201,22 @@ aws logs create-log-group --log-group-name awslogs-container-hands-on
 
 # ■環境変数処理
 function ExportEnvironmentVariable () {
-clear; cat << EOF > ${LogFile}
-##### 正常終了 ##########################################
-##### 以下をCopyして、コンソールに貼り付けて下さい。#####
-export AccountID="${AccountID}"
-export VpcId="${VpcId}"
-export SubnetId1aPublic="${SubnetId1aPublic}"
-export SubnetId1cPublic="${SubnetId1cPublic}"
-export SubnetId1aPrivate="${SubnetId1aPrivate}"
-export SubnetId1cPrivate="${SubnetId1cPrivate}"
-export InternetGatewayId="${InternetGatewayId}"
-export RouteTableIdPublic="${RouteTableIdPublic}"
-export RouteTableIdPrivate="${RouteTableIdPrivate}"
-export PublicSecurityGroupsId="${PublicSecurityGroupsId}"
-export PrivateSecurityGroupsId="${PrivateSecurityGroupsId}"
-#########################################################
+echo "##### 正常終了 #####"
+echo "##### 環境変数出力 #####"
+clear; cat << EOF > 2.network-output.env
+AccountID="${AccountID}"
+VpcId="${VpcId}"
+SubnetId1aPublic="${SubnetId1aPublic}"
+SubnetId1cPublic="${SubnetId1cPublic}"
+SubnetId1aPrivate="${SubnetId1aPrivate}"
+SubnetId1cPrivate="${SubnetId1cPrivate}"
+InternetGatewayId="${InternetGatewayId}"
+RouteTableIdPublic="${RouteTableIdPublic}"
+RouteTableIdPrivate="${RouteTableIdPrivate}"
+PublicSecurityGroupsId="${PublicSecurityGroupsId}"
+PrivateSecurityGroupsId="${PrivateSecurityGroupsId}"
 EOF
-cat ${LogFile}
+cat 2.network-output.env
 }
 
 
