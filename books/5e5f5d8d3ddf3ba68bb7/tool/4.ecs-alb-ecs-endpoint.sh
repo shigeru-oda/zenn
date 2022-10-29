@@ -201,6 +201,7 @@ aws ecs create-service \
 
 # ■環境変数処理
 function ExportEnvironmentVariable () {
+cd ~/environment/first-half-tool/books/5e5f5d8d3ddf3ba68bb7/tool
 clear; cat << EOF > 4.ecs-alb-ecs-endpoint-output.env
 AccountID="${AccountID}"
 VpcId="${VpcId}"
@@ -218,6 +219,8 @@ LoadBalancerArn="${LoadBalancerArn}"
 TargetGroupArn="${TargetGroupArn}"
 LoadBalancersDnsName="${LoadBalancersDnsName}"
 RevisionNo="${RevisionNo}"
+AWS_DEFAULT_REGION=ap-northeast-1
+AWS_DEFAULT_OUTPUT=json
 EOF
 cat 4.ecs-alb-ecs-endpoint-output.env
 }
