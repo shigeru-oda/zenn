@@ -219,8 +219,6 @@ LoadBalancerArn="${LoadBalancerArn}"
 TargetGroupArn="${TargetGroupArn}"
 LoadBalancersDnsName="${LoadBalancersDnsName}"
 RevisionNo="${RevisionNo}"
-AWS_DEFAULT_REGION=ap-northeast-1
-AWS_DEFAULT_OUTPUT=json
 EOF
 cat 4.ecs-alb-ecs-endpoint-output.env
 }
