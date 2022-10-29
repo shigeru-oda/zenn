@@ -201,8 +201,6 @@ aws logs create-log-group --log-group-name awslogs-container-hands-on
 
 # ■環境変数処理
 function ExportEnvironmentVariable () {
-echo "##### 正常終了 #####"
-echo "##### 環境変数出力 #####"
 clear; cat << EOF > 2.network-output.env
 AccountID="${AccountID}"
 VpcId="${VpcId}"
@@ -237,5 +235,5 @@ echo "##### LogGroup処理 `date` #####"
 CreateLogGroup
 echo "##### 環境変数処理 `date` #####"
 ExportEnvironmentVariable
-
+echo "##### 正常終了 #####"
 

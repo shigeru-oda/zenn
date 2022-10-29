@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e -o pipefail
+source ./3.cloud9-output.env
 
 # ■AWS CLI変数処理
 function SettingEnvironmentVariable () {
@@ -200,25 +201,23 @@ aws ecs create-service \
 
 # ■環境変数処理
 function ExportEnvironmentVariable () {
-echo "##### 正常終了 #####"
-echo "##### 環境変数出力 #####"
-clear; cat << EOF 4.ecs-alb-ecs-endpoint-output.env
-export AccountID="${AccountID}"
-export VpcId="${VpcId}"
-export SubnetId1aPublic="${SubnetId1aPublic}"
-export SubnetId1cPublic="${SubnetId1cPublic}"
-export SubnetId1aPrivate="${SubnetId1aPrivate}"
-export SubnetId1cPrivate="${SubnetId1cPrivate}"
-export InternetGatewayId="${InternetGatewayId}"
-export RouteTableIdPublic="${RouteTableIdPublic}"
-export RouteTableIdPrivate="${RouteTableIdPrivate}"
-export PublicSecurityGroupsId="${PublicSecurityGroupsId}"
-export PrivateSecurityGroupsId="${PrivateSecurityGroupsId}"
-export InstanceId="${InstanceId}"
-export LoadBalancerArn="${LoadBalancerArn}"
-export TargetGroupArn="${TargetGroupArn}"
-export LoadBalancersDnsName="${LoadBalancersDnsName}"
-export RevisionNo="${RevisionNo}"
+clear; cat << EOF > 4.ecs-alb-ecs-endpoint-output.env
+AccountID="${AccountID}"
+VpcId="${VpcId}"
+SubnetId1aPublic="${SubnetId1aPublic}"
+SubnetId1cPublic="${SubnetId1cPublic}"
+SubnetId1aPrivate="${SubnetId1aPrivate}"
+SubnetId1cPrivate="${SubnetId1cPrivate}"
+InternetGatewayId="${InternetGatewayId}"
+RouteTableIdPublic="${RouteTableIdPublic}"
+RouteTableIdPrivate="${RouteTableIdPrivate}"
+PublicSecurityGroupsId="${PublicSecurityGroupsId}"
+PrivateSecurityGroupsId="${PrivateSecurityGroupsId}"
+InstanceId="${InstanceId}"
+LoadBalancerArn="${LoadBalancerArn}"
+TargetGroupArn="${TargetGroupArn}"
+LoadBalancersDnsName="${LoadBalancersDnsName}"
+RevisionNo="${RevisionNo}"
 EOF
 cat 4.ecs-alb-ecs-endpoint-output.env
 }
@@ -239,5 +238,5 @@ echo "##### ECS/Fargate作成処理 `date` #####"
 CreateEcsFargate
 echo "##### 環境変数処理 `date` #####"
 ExportEnvironmentVariable
-
+echo "##### 正常終了 #####"
 

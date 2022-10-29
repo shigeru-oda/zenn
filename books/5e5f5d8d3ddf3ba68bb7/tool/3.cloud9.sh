@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e -o pipefail
+source ./2.network-output.env
 
 # ■Cloud9の作成
 function CreateCloud9 () {
@@ -57,21 +58,19 @@ aws ec2 associate-iam-instance-profile \
 
 # ■環境変数処理
 function ExportEnvironmentVariable () {
-echo "##### 正常終了 #####"
-echo "##### 環境変数出力 #####"
 clear; cat << EOF > 3.cloud9-output.env
-export AccountID="${AccountID}"
-export VpcId="${VpcId}"
-export SubnetId1aPublic="${SubnetId1aPublic}"
-export SubnetId1cPublic="${SubnetId1cPublic}"
-export SubnetId1aPrivate="${SubnetId1aPrivate}"
-export SubnetId1cPrivate="${SubnetId1cPrivate}"
-export InternetGatewayId="${InternetGatewayId}"
-export RouteTableIdPublic="${RouteTableIdPublic}"
-export RouteTableIdPrivate="${RouteTableIdPrivate}"
-export PublicSecurityGroupsId="${PublicSecurityGroupsId}"
-export PrivateSecurityGroupsId="${PrivateSecurityGroupsId}"
-export InstanceId="${InstanceId}"
+AccountID="${AccountID}"
+VpcId="${VpcId}"
+SubnetId1aPublic="${SubnetId1aPublic}"
+SubnetId1cPublic="${SubnetId1cPublic}"
+SubnetId1aPrivate="${SubnetId1aPrivate}"
+SubnetId1cPrivate="${SubnetId1cPrivate}"
+InternetGatewayId="${InternetGatewayId}"
+RouteTableIdPublic="${RouteTableIdPublic}"
+RouteTableIdPrivate="${RouteTableIdPrivate}"
+PublicSecurityGroupsId="${PublicSecurityGroupsId}"
+PrivateSecurityGroupsId="${PrivateSecurityGroupsId}"
+InstanceId="${InstanceId}"
 EOF
 cat 3.cloud9-output.env
 }
@@ -82,4 +81,5 @@ echo "##### Cloud9処理 `date` #####"
 CreateCloud9
 echo "##### 環境変数処理 `date` #####"
 ExportEnvironmentVariable
+echo "##### 正常終了 #####"
 
