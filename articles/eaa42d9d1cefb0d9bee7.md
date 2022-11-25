@@ -1,5 +1,5 @@
 ---
-title: "SageMakerでpandas.read_csv(s3)が上手く稼働しないので整理"
+title: "pandas.read_csv(s3)が上手く稼働しないので整理"
 emoji: "🚴🏻‍♀️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["aws","座学","調べ物"]
